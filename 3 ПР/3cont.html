@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Анкета абитуриента</title>
+    <link rel=stylesheet type="text/css" href="normalize.css">
+    <link rel=stylesheet type="text/css" href="3cont.css">
+</head>
+<body>
+<h1>Скорее заполняй анкету абитуриента и пополняй ряды студентов <font color="DarkOrange">СФУ!</font></h1>
+<form action="action_page.php" style="border:1px solid #FFA500">
+  <div class="container">
+
+ <label for="fio" class="text"><b>Пожалуйста, напишите ваше ФИО повторно</b></label>
+    <input type="text" placeholder="Фамилия Имя Отчество" name="fio" required>
+
+<label for="date" class="text"><b>Дата рождения: </b></label>
+<input type="date" id="date" name="date"/>
+
+<p><b>Являетесь ли вы сиротой?</b></p>
+<input type="checkbox" id="check1"><label for="check1" class="text">Да</label>
+<input type="checkbox" id="check2"><label for="check2" class="text">Нет</label>
+<br>
+<br>
+<p><b>Находитесь ли вы под опекой?</b></p>
+<input type="checkbox" id="check1"><label for="check1" class="text">Да</label>
+<input type="checkbox" id="check2"><label for="check2" class="text">Нет</label>
+<br>
+<br>
+ <label for="fio" class="text"><b>Укажите ФИО опекуна</b></label>
+    <input type="text" placeholder="Фамилия Имя Отчество" name="fio" required>
+<p><b>Имеете ли инвалидность?</b></p>
+<input type="checkbox" id="check1"><label for="check1" class="text">Да</label>
+<input type="checkbox" id="check2"><label for="check2" class="text">Нет</label>
+<br>
+<p><b>Нуждаетесь в общежитии?</b></p>
+<input type="checkbox" id="check1"><label for="check1" class="text">Да</label>
+<input type="checkbox" id="check2"><label for="check2" class="text">Нет</label>
+<br>
+<br> 
+<p><b>Какие предметы вы сдавали?</b></p>
+<input type="checkbox" id="check1"><label for="check1" class="text">Математика</label><br>
+<input type="checkbox" id="check2"><label for="check2" class="text">Обществознание</label><br>
+<input type="checkbox" id="check1"><label for="check3" class="text">Английский язык</label><br>
+<input type="checkbox" id="check2"><label for="check4" class="text">Информатика</label><br>
+<input type="checkbox" id="check2"><label for="check4" class="text">Русский язык</label><br>
+<br>
+<label for="ball" class="text"><b>Напишите общую сумму баллов ЕГЭ</b></label>
+    <input type="text" placeholder="Баллы" name="ball" required>
+
+<br>
+<p>Изучи направления нашего института - <a href="https://iubp.sfu-kras.ru/ru/edu/programs" class="clr">ИУБП</a>. *Кликай на ИУБП!</p>
+<br>
+<p>А теперь выберите направление..</p>
+        <select id="direction" name="direction" class="ttt">
+          <option value="Менеджмент">Менеджмент</option>
+          <option value="Прикладная информатика">Прикладная информатика</option>
+          <option value="Бизнес - Информатика">Бизнес - Информатика</option>
+	<option value="Бизнес - Информатика">Экономическая безопасность</option>
+        </select>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="clearfix">
+      <button type="submit" class="next"><a href="3cont2.html" class="rar">Отправить анкету</button></a>
+    </div>
+  </div>
+</form>
+
+
+</body>
+</html>

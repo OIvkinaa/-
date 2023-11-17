@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Абитуриет СФУ</title>
+    <link rel=stylesheet type="text/css" href="normalize.css">
+    <link rel=stylesheet type="text/css" href="3.css">
+</head>
+<body>
+<h1>Добро пожаловать, Абитуриент <font color="DarkOrange">СФУ</font>!</h1>
+<h2>Университет больших возможностей уже ждёт тебя!</h2>
+<br>
+
+
+<form action="action_page.php" style="border:1px solid #FFA500">
+  <div class="container">
+    <h1>Регистрация</h1>
+
+ <label for="fio" class="r"><b>ФИО</b></label>
+    <input type="text" placeholder="Напишите ваше ФИО" name="fio" required>
+
+<label for="number" class="r"><b>Контактный номер телефона</b></label>
+    <input type="text" placeholder="Введите ваш контактный номер телефона" name="number" required>
+ 
+<label for="email" class="r"><b>Электронная почта</b></label>
+    <input type="text" placeholder="Введите электронную почту" name="email" required>
+<br>
+<br>
+<p>Придумайте пароль</p>
+<br>
+<br>
+ <label for="psw" class="r"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="psw" required>
+
+    <label for="psw-repeat" class="r"><b>Повторно введите пароль</b></label>
+    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn"><a href="3cont.html" class="clr">Продолжить</button></a>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
