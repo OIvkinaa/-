@@ -1,0 +1,65 @@
+.contener {
+    width: 900px;
+    height: 400px;
+    border: 1px solid #FFE4B5;
+    margin: 50px auto;
+    position: relative;
+    background: #FFE4B5;
+}
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+    bottom: 205px;
+    animation-name: black-circle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes black-circle {
+    0% {
+        left: 200px;
+    }
+
+    100% {
+        left: 900px;
+    }
+}
+
+.fig1 {
+    display: block;
+    width: 126px;
+    height: 200px;
+    background-color: #808080;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    left: 150px;
+    bottom: 120px;
+    transform: rotate(70deg);
+}
+.fig2 {
+    width: 100px;
+    height: 100px;
+    background: #696969;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    left: 100px;
+    bottom: 110px;
+}
+.fig3 {
+    width: 80px;
+    height: 20px;
+    background: #696969;
+    position: absolute;
+    left: 260px;
+    bottom: 240px;
+    transform: rotate(70deg)
+}
+
+                   
