@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Абитуриет СФУ</title>
+    <link rel=stylesheet type="text/css" href="normalize.css">
+    <link rel=stylesheet type="text/css" href="3.css">
+</head>
+<body>
+<h1>Добро пожаловать, Абитуриент <font color="DarkOrange">СФУ</font>!</h1>
+<h2>Университет больших возможностей уже ждёт тебя!</h2>
+<br>
+
+<form action="3cont.html" onsubmit="testForm(document.getElementById('box'))" style="border:1px solid #FFA500" id="box" method="post">
+  <div class="container">
+    <h1>Регистрация</h1>
+
+ <label for="fio" class="r"><b>ФИО</b></label>
+    <input type="text" placeholder="Напишите ваше ФИО" name="fio" id="fio">
+    <label for="number" class="r"><b>Контактный номер телефона</b></label>
+    <input type="text" placeholder="Введите ваш контактный номер телефона" name="number" id="number">
+ 
+<label for="email" class="r"><b>Электронная почта</b></label>
+    <input type="text" placeholder="Введите электронную почту" name="email" id="email">
+<br>
+<br>
+<p>Придумайте пароль</p>
+<br>
+<br>
+ <label for="psw" class="r"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="psw" id="psw" >
+
+    <label for="psw-repeat" class="r"><b>Повторно введите пароль</b></label>
+    <input type="password" placeholder="Повторите пароль" name="psw-repeat" id="pswrepeat">
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me </label>
+      <br>
+      <span id="error" style="color: red"></span>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Продолжить</button>
+    </div>
+  </div>
+</form>
+
+<script>
+function setTimeout(){
+  window.location.href = '3cont.html';
+}
+function testForm(form){
+     event.preventDefault();
+
+var fio = form.fio.value;
+var number = form.number.value;
+var email = form.email.value;
+var psw = form.psw.value;
+var psw2 = form.pswrepeat.value;
+const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const regexp = /(?:\+|\d)[\d\-\(\) ]{9,}\d/g;
+
+
+var fail = false;
+
+
+if (fio == "" || fio == " ")
+fail="Введите ФИО"
+else if(number == "" || regexp.test(number) == false)
+fail="Введите корректный номер телефона: +7..."
+else if(email == "" || re.test(email) == false)
+fail="Введите корректную электронную почту"
+else if(psw == "" || psw ==" " || psw.length < 8)
+fail="Введите пароль, который содержит 8 символов"
+else if(psw2 == "" || psw2 ==" " || psw2 !== psw)
+fail="Пароли не совпадают"
+
+if(fail){
+ document.getElementById('error').innerHTML = fail;
+} else{
+ alert("ФИО: " + fio + "\nНомер телефона: " + number + "\nПочта: " + email + "\nПароль: " + psw);
+ setTimeout(form)
+ }
+
+}
+
+</script>
+</body>
+</html>

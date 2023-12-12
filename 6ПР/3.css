@@ -1,0 +1,87 @@
+body {
+    background-color: #FDF5E6
+}
+@font-face {
+    font-family: One;
+    src: url('Raleway-Black.ttf');
+}
+@font-face {
+    font-family: Two;
+    src: url('Raleway-Thin.ttf');
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: One;
+}
+h2 {
+    font-size: 25px;
+    text-align: center;
+    font-family: One;
+    text-decoration: underline #FFA07A;
+}
+
+    p {
+    font-size: 18px;
+    color: DarkOrange;
+    text-align: center;
+    font-family: One;
+}
+/*Forms*/
+.container {
+    padding: 40px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #FFE4B5;
+    font-family: Two;
+}
+    input[type=text]:focus, input[type=password]:focus { /*наведение изменение цвета*/
+        background-color: #ddd;
+        outline: none;
+    }
+
+.r { /*стиль текста*/
+    font-family: Two;
+    font-size: 18px;
+}
+button {
+    background-color: #FFA07A;
+    color: black;
+    font-family: One;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    button:hover {
+        opacity: 1;
+    }
+/*  нопка */
+.signupbtn {
+    float: left;
+    width: 100%;
+}
+.clr {
+    color: black
+}
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .signupbtn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>Анкета абитуриента</title>
+    <link rel=stylesheet type="text/css" href="normalize.css">
+    <link rel=stylesheet type="text/css" href="3cont.css">
+</head>
+<body>
+<h1>Скорее заполняй анкету абитуриента и пополняй ряды студентов <font color="DarkOrange">СФУ!</font></h1>
+<form action="3cont2.html" onsubmit="testForm(document.getElementById('box2'))" style="border:1px solid #FFA500" id="box2" method="post">
+  <div class="container">
+
+ <label for="fio" class="text"><b>Пожалуйста, напишите ваше ФИО повторно</b></label>
+    <input type="text" placeholder="Фамилия Имя Отчество" name="fio" id="fio">
+
+<label for="date" class="text"><b>Дата рождения: </b></label>
+<input type="date" id="date" name="date" >
+
+<p><b>Являетесь ли вы сиротой?</b></p>
+<input type="radio" id="yes" name="rad" value="да"><label for="yes" class="text">Да</label>
+<input type="radio" id="no" name="rad" value="нет"><label for="no" class="text">Нет</label>
+<br>
+<br>
+<p><b>Находитесь ли вы под опекой?</b></p>
+<input type="radio" id="yes1" name="rad1" value="да"><label for="yes" class="text">Да</label>
+<input type="radio" id="no1" name="rad1" value="нет"><label for="no" class="text">Нет</label>
+<br>
+<br>
+ <label for="fio" class="text"><b>Укажите ФИО опекуна</b></label>
+    <input type="text" placeholder="Фамилия Имя Отчество" name="fio1" id="fio1">
+
+<p><b>Имеете ли инвалидность?</b></p>
+<input type="radio" id="yes" name="rad2" value="да"><label for="yes" class="text">Да</label>
+<input type="radio" id="no" name="rad2" value="нет"><label for="no" class="text">Нет</label>
+<br>
+<p><b>Нуждаетесь в общежитии?</b></p>
+<input type="radio" id="yes" name="rad3" value="да"><label for="yes" class="text">Да</label>
+<input type="radio" id="no" name="rad3" value="нет"><label for="no" class="text">Нет</label>
+<br>
+<br> 
+<p><b>Какие предметы вы сдавали?</b></p>
+<input type="checkbox" id="check1" name="check" value="Математика"><label for="check1" class="text">Математика</label><br>
+<input type="checkbox" id="check2" name="check" value="Обществознание"><label for="check2" class="text">Обществознание</label><br>
+<input type="checkbox" id="check3" name="check" value="Английский язык"><label for="check3" class="text">Английский язык</label><br>
+<input type="checkbox" id="check4" name="check" value="Информатика"><label for="check4" class="text">Информатика</label><br>
+<input type="checkbox" id="check5" name="check" value="Русский язык"><label for="check5" class="text">Русский язык</label><br>
+<br>
+<label for="ball" class="text"><b>Напишите общую сумму баллов ЕГЭ</b></label>
+    <input type="text" placeholder="Баллы" name="ball" id="ball">
+
+<br>
+<p>Изучи направления нашего института - <a href="https://iubp.sfu-kras.ru/ru/edu/programs" class="clr">ИУБП</a>. *Кликай на ИУБП!</p>
+<br>
+<p>А теперь выберите направление..</p>
+        <select id="direction" name="direction" class="ttt">
+          <option value="">Направление</option>
+          <option value="Менеджмент">Менеджмент</option>
+          <option value="Прикладная информатика">Прикладная информатика</option>
+          <option value="Бизнес - Информатика">Бизнес - Информатика</option>
+	        <option value="Бизнес - Информатика">Экономическая безопасность</option>
+        </select>
+  <br>
+  <br>
+  <br>
+  <br>
+  <span id="error" style="color: red"></span>
+  <br>
+<div class="clearfix">
+      <button type="submit" class="next">Отправить анкету</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  function setTimeout(){
+    window.location.href = '3cont2.html';
+  }
+  function testForm(form){
+       event.preventDefault();
+  
+  var fio = form.fio.value;
+  var date = form.date.value;
+  var sirota = form.rad.value;
+  var opeka = form.rad1.value;
+  var fio1 = form.fio1.value;
+  var inv = form.rad2.value;
+  var dom = form.rad3.value;
+  var ball = form.ball.value;
+  var direction = form.direction.value;
+ 
+  
+  var fail = false;
+  
+  
+  if (fio == "" || fio == " ")
+  fail="Введите ФИО"
+  else if(date == "")
+  fail="Введите дату рождения"
+  else if(sirota == "")
+  fail="Выберите вариант ответа о сиротстве"
+  else if(opeka == "")
+  fail="Выберите вариант ответа об опекунстве"
+  else if(fio1 == "" || fio == " ")
+  fail="Если вы выбрали утвердительный ответ, введите ФИО опекуна, если же нет, то поставьте прочерк"
+  else if(inv == "")
+  fail="Выберите вариант ответа о инвалидности"
+  else if(dom == "")
+  fail="Выберите вариант ответа о нужде в общажитии"
+
+  else if(ball == "" || ball == " ")
+  fail="Введите число ваших баллов"
+  else if(direction == "")
+  fail="Выберите направление обучения"
+  
+  if(fail){
+   document.getElementById('error').innerHTML = fail;
+  } else{
+   alert("ФИО: " + fio + "\nДата рождения: " + date + "\nЯвляется ли сиротой: " + sirota + "\nЕсть ли опекун: " + opeka + "\nФИО опекуна: " + fio1 + "\nЕсть ли инвалидность: " + inv + "\nНуждается ли в общажитии: " + dom + "\nБаллы ЕГЭ: " + ball + "\nНаправление: " + direction);
+   setTimeout(form)
+   }
+  
+  }
+  
+  </script>
+
+</body>
+</html>
