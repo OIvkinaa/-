@@ -1,0 +1,76 @@
+body {
+    background-color: #696969;
+    color: white;
+}
+
+@font-face {
+    font-family: One;
+    src: url('Raleway-Black.ttf');
+}
+@font-face {
+    font-family: Two;
+    src: url('Raleway-Thin.ttf');
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: One;
+    padding: 10px 30px 10px 20px;
+    margin: 10px;
+    text-shadow: #8B0000 1px 0 10px;
+}
+a {
+    color: white;
+}
+
+h2 {
+    font-size: 15px;
+    text-align: center;
+    font-family: Two;
+    background-color: #696969;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+
+
+.container {
+    position: relative;
+    width: 50%;
+    left: 400px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #808080;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    width: 100%;
+    left: 0;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
+}

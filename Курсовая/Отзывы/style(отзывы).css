@@ -1,0 +1,41 @@
+body {
+    background-color: #808080;
+    color: white;
+}
+@font-face {
+    font-family: One;
+    src: url('Raleway-Black.ttf');
+}
+@font-face {
+    font-family: Two;
+    src: url('Raleway-Thin.ttf');
+}
+h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: One;
+    text-shadow: #8B0000 1px 0 10px;
+}
+h2 {
+    font-size: 29px;
+    text-align: left;
+    font-family: Two;
+    margin: 20px;
+}
+h3 {
+    font-size: 18px;
+    text-align: right;
+    font-family: Two;
+    margin: 20px;
+    color:#D3D3D3;
+}
+p {
+    font-size: 19px;
+    font-family: Two;
+    text-align: left;
+    background-color: #696969;
+    padding: 10px 30px 10px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    color: #FFFAF0;
+}
